@@ -13,7 +13,7 @@
     <!-- La clase container abarcará todo  -->
     <div class="container">
         <!-- En el header pondremos el logo de la empresa y una lista de navegación  -->
-        <header>
+        <header class="header">
             <div class="logo">
                 <img src="./img/icons/logo_empresa_smaller.png" alt="logo_empresa">
             </div>
@@ -46,22 +46,22 @@
                 <div class="carousel-inner" role="listbox">
                   <div class="carousel-item active">
                       <a href="./ps5.html">
-                    <img class="d-block w-100" src="./img/PS5.jpg" data-src="holder.js/900x400?theme=social" alt="playstation_5">
+                    <img class="d-block w-100 carrusel-img" src="./img/PS5.jpg" data-src="holder.js/900x400?theme=social" alt="playstation_5">
                 </a>
                   </div>
                   <div class="carousel-item">
                       <a href="./switch.html">
-                    <img class="d-block w-100" src="./img/Switch.jpg" data-src="holder.js/900x400?theme=industrial" alt="nintendo_switch">
+                    <img class="d-block w-100 carrusel-img" src="./img/Switch.jpg" data-src="holder.js/900x400?theme=industrial" alt="nintendo_switch">
                 </a>
                   </div>
                   <div class="carousel-item">
                       <a href="./juego_ff7_remake.html">
-                    <img class="d-block w-100" src="./img/FF7.jpg" data-src="holder.js/900x400?theme=industrial" alt="ff7_remake">
+                    <img class="d-block w-100 carrusel-img" src="./img/FF7.jpg" data-src="holder.js/900x400?theme=industrial" alt="ff7_remake">
                 </a>
                   </div>
                   <div class="carousel-item">
                       <a href="./juego_zelda.html">
-                    <img class="d-block w-100" src="./img/BOTW.jpg" data-src="holder.js/900x400?theme=industrial" alt="zelda_botw">
+                    <img class="d-block w-100 carrusel-img" src="./img/BOTW.jpg" data-src="holder.js/900x400?theme=industrial" alt="zelda_botw">
                 </a>
                   </div>
                 </div>
@@ -80,58 +80,64 @@
             <div class="header_cuerpo">
                 <h2>Juegos más vendidos</h2>
             </div>
-            <aside class="aside_izquierdo_superior">
-                <div class="titulo_juego_1">
-                    <h2>Final Fantasy VII Remake PS5</h2>
-                </div>
-                <div class="portada_juego_1">
-                    <a href="./juego_ff7_remake.html">
-                    <img src="./img/FF7_remake_venta.jpg" alt="ff7_remake_img">
-                </a>
-                </div>
-                <div class="precio_juego_1">
-                    <h2>Precio: $ 59.990</h2>
-                </div>
-            </aside>
-            <aside class="aside_izquierdo_inferior">
-                <div class="titulo_juego_2">
-                    <h2>The Legend of Zelda: Breath of the Wild Nintendo Switch</h2>
-                </div>
-                <div class="portada_juego_2">
-                    <a href="./juego_zelda.html">
-                    <img src="./img/BOTW_venta.jpg" alt="zelda_img">
-                </a>
-                </div>
-                <div class="precio_juego_2">
-                    <h2>Precio: $ 49.990</h2>
-                </div>
-            </aside>
-            <aside class="aside_derecho_superior">
-                <div class="titulo_juego_3">
-                    <h2>Demon Souls PS5</h2>
-                </div>
-                <div class="portada_juego_3">
-                    <a href="./juego_demon_souls.html">
-                    <img src="./img/demon_souls_venta.jpg" alt="demon_souls_img">
-                </a>
-                </div>
-                <div class="preciojuego3">
-                    <h2>Precio: $ 69.990</h2>
-                </div>
-            </aside>
-            <aside class="aside_derecho_inferior">
-                <div class="titulo_juego_4">
-                    <h2>Pokemon Let's Go Pikachu! Nintendo Switch</h2>
-                </div>
-                <div class="portada_juego_4">
-                    <a href="./juego_pokemon.html">
-                    <img src="./img/pokemon_venta.jpg" alt="pokemon_img">
-                </a>
-                </div>
-                <div class="precio_juego_4">
-                    <h2>Precio: $ 39.990</h2>
-                </div>
-            </aside>                        
+            <div class= "aside-wrap">
+                <aside class="aside_izquierdo_superior">
+                    <div class="titulo_juego_1">
+                        <h2 class= "name_title">Final Fantasy VII Remake</h2> 
+                        <p class="plataform">PS5</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_ff7_remake.html">
+                            <img class= "game_img" src="./img/FF7_remake_venta.jpg" alt="ff7_remake_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_1">
+                        <h2>Precio: $ 59.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_izquierdo_inferior">
+                    <div class="titulo_juego_2">
+                        <h2>The Legend of Zelda:<br>Breath of the Wild</h2>
+                        <p class="plataform">Nintendo Switch</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_zelda.html">
+                            <img class= "game_img" src="./img/BOTW_venta.jpg" alt="zelda_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_2">
+                        <h2>Precio: $ 49.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_derecho_superior">
+                    <div class="titulo_juego_3">
+                        <h2 class= "name_title">Demon Souls</h2>
+                        <p class="plataform">PS5</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_demon_souls.html">
+                            <img class= "game_img" src="./img/demon_souls_venta.jpg" alt="demon_souls_img">
+                        </a>
+                    </div>
+                    <div class="preciojuego3">
+                        <h2 >Precio: $ 69.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_derecho_inferior">
+                    <div class="titulo_juego_4">
+                        <h2 class= "name_title">Pokemon Let's Go Pikachu!</h2>
+                        <p class="plataform">Nintendo Switch</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_pokemon.html">
+                            <img class= "game_img" src="./img/pokemon_venta.jpg" alt="pokemon_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_4">
+                        <h2>Precio: $ 39.990</h2>
+                    </div>
+                </aside>                        
+            </div>
         </div>
         <!-- En el footer pondremos las rrss (aún no está puesta) y la marca de la empresa  -->
         <footer class="footer">
