@@ -34,7 +34,7 @@ body{
 }
 
 .carrusel-img{
-    height: 45rem;
+    height: 30rem;
 }
 .cuerpo{
     background-color: white;
@@ -145,10 +145,10 @@ body{
 
 .footer_content{
     display: grid;
-    width: 1320px;
+    width: auto;
     background-color: white;
     color: rgb(47, 141, 230);
-    grid-template-columns: 250px auto;
+    grid-template-columns: 20% auto;
     padding: 10px;
     text-align: center;
 }
@@ -160,8 +160,8 @@ body{
 .redes {
     width: 15%;
     text-align:center;
-    flex-wrap: wrap;
     
+
 }
 
 .redes ul li {
@@ -195,5 +195,35 @@ body{
     }
     .game_img{
         width: 200px;       
+    }
+    .carrusel-img{
+        height: 10rem;
+        width: auto;
+    }
+    .carrusel{
+        width: 250px;
+    }
+    .aside_game {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .game_content{
+        width: 250px;
+        transition: .5s ease; 
+    }
+    .footer_content{
+        width: auto;
+        display: block;
+        
+    }
+    .redes {
+        width: auto;
+        text-align:center;
+        display: flex;
+        
+    }
+    .menu_wrap{
+        display: flex;
+        list-style: none;
     }
 }
