@@ -202,6 +202,19 @@ body{
     background-color: white;
 }
 
+.row_registro{
+    width: 40%;
+    margin: 2%;
+}
+
+.form-group_registro{
+    padding: 0.3cm;
+}
+
+.titulo_registro{
+    text-align: center;
+}
+
 @media screen and (max-width: 425px){
     .aside-wrap{
         flex-direction: column;
