@@ -1,0 +1,17 @@
+{% extends 'Usuario/base/base.html' %}
+
+{% block content %}
+{% block titulo_principal %} Lista de Usuarios {% endblock %}
+{% if object_list %}
+
+{% for usuario in object_list %}
+<p>Nombre: {{ usuario.username }}</p>
+<p>Email: {{ usuario.email }}</p>
+<br>
+{% endfor %}
+
+{% else %}
+<h1>No hay registros de usuario</h1>
+{% endif %}
+
+{% endblock %}

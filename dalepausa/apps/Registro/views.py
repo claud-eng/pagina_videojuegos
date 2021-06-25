@@ -1,34 +1,57 @@
 from django.shortcuts import render,redirect
 from .models import Videojuego,Consola
 from .forms import VideojuegoForm,ConsolaForm
-
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 # Create your views here.
 
-def listar_videojuegos(request):
-    videojuegos = Videojuego.objects.all()
-    return render(request,"Registro/listar_videojuegos.html", {'videojuegos': videojuegos})
+#VIDEOJUEGO
+
+class VideojuegoList(ListView):
+    model = Videojuego
+    template_name = 'Registro/listar_videojuegos.html'
 
 
-def agregar_videojuego(request):
-    if request.method == "POST":
-        form = VideojuegoForm(request.POST)
-        if form.is_valid():
-            model_instance = form.save(commit=False)
-            model_instance.save()
-            return redirect("/agregar_videojuego")
-    else:
-        form = VideojuegoForm()
-        return render(request, "Registro/agregar_videojuego.html", {'form': form})
+class VideojuegoCreate(CreateView):
+    model = Videojuego
+    form_class = VideojuegoForm
+    template_name = 'Registro/videojuego_form.html'
+    success_url = reverse_lazy('listar_videojuegos')
 
 
-def agregar_consola(request):
-    if request.method == "POST":
-        form = ConsolaForm(request.POST)
-        if form.is_valid():
-            model_instance = form.save(commit=False)
-            model_instance.save()
-            return redirect("/agregar_consola")
-    else:
-        form = ConsolaForm()
-        return render(request, "Registro/agregar_consola.html", {'form': form})
+class VideojuegoDelete(DeleteView):
+    model = Videojuego
+    template_name = 'Registro/eliminar_videojuego.html'
+    success_url = reverse_lazy('listar_videojuegos')
 
+
+class VideojuegoUpdate(UpdateView):
+    model = Videojuego
+    form_class = VideojuegoForm
+    template_name = 'Registro/videojuego_form.html'
+    success_url = reverse_lazy('listar_videojuegos')
+
+
+#CONSOLA
+
+class ConsolaList(ListView):
+    model = Consola
+    template_name = 'Registro/listar_consolas.html'
+
+class ConsolaCreate(CreateView):
+    model = Consola
+    form_class = ConsolaForm
+    template_name = 'Registro/consola_form.html'
+    success_url = reverse_lazy('listar_consolas')
+
+class ConsolaDelete(DeleteView):
+    model = Consola
+    template_name = 'Registro/eliminar_consola.html'
+    success_url = reverse_lazy('listar_consolas')
+
+
+class ConsolaUpdate(UpdateView):
+    model = Consola
+    form_class = ConsolaForm
+    template_name = 'Registro/consola_form.html'
+    success_url = reverse_lazy('listar_consolas')

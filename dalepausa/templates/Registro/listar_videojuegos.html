@@ -1,24 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar videojuegos</title>
-</head>
-<body>
-    <h2>Lista de videojuegos</h2>
+{% extends 'Registro/base.html' %} 
 
-    {% for v in videojuegos %}
-        <div>
-            <p>Nombre: {{v.nombre}}</p>
-            <p>Precio: {{v.precio}}</p>
-            <p>Stock: {{v.stock}}</p>
-            <p>Formato: {{v.formato}}</p>
-            <p>Plataforma: {{v.plataforma}}</p>
-        </div>
-        <br>
-    {% endfor %}
-    
-</body>
-</html>
+{% block titulo_principal %} <H2> CRUD : LIST</H2>{% endblock %}
+
+{% block content %}
+{% if object_list %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Formato</th>
+            <th>Plataforma</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for videojuego in object_list %}
+        <tr>
+            <th scope="row">{{ videojuego.nombre }} </th>
+            <td>${{ videojuego.precio }}</td>
+            <td>{{ videojuego.stock }}</td>
+            <td>{{ videojuego.formato }}</td>
+            <td>{{ videojuego.plataforma }}</td>
+
+            <td><a class="btn btn-primary" href="{% url 'modificar_videojuego' videojuego.id %}">Editar</a></td>
+            <td><a class="btn btn-danger" href="{% url 'eliminar_videojuego' videojuego.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+<h1>No hay registros de videojuego</h1>
+{% endif %} {% endblock %}
