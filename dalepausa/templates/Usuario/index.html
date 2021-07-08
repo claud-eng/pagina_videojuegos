@@ -1,0 +1,129 @@
+{% extends 'Usuario/base/base.html' %} 
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}" type="text/css">
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    
+        <!-- Carrusel de imágenes de los productos con más marketing  -->
+        <section class="carrusel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <a href="./ps5.html">
+                            <img class="d-block w-100 carrusel-img" src="{% static './img/PS5.jpg' %}"
+                                data-src="holder.js/900x400?theme=social" alt="playstation_5">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./switch.html">
+                            <img class="d-block w-100 carrusel-img" src="{% static './img/Switch.jpg' %}"
+                                data-src="holder.js/900x400?theme=industrial" alt="nintendo_switch">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./juego_ff7_remake.html">
+                            <img class="d-block w-100 carrusel-img" src="{% static './img/FF7.jpg' %}"
+                                data-src="holder.js/900x400?theme=industrial" alt="ff7_remake">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./juego_zelda.html">
+                            <img class="d-block w-100 carrusel-img" src="{% static './img/BOTW.jpg' %}"
+                                data-src="holder.js/900x400?theme=industrial" alt="zelda_botw">
+                        </a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+        </section>
+        <!-- En el cuerpo pondremos diferentes juegos en distintos paneles para la página principal -->
+        <div class="cuerpo">
+            <div class="header_cuerpo">
+                <h2>Juegos más vendidos</h2>
+            </div>
+            <div class="aside-wrap">
+                <aside class="aside_game">
+                    <div class="titulo_juego_1">
+                        <h2 class="name_title">Final Fantasy VII Remake</h2>
+                        <p class="plataform">PS5</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_ff7_remake.html">
+                            <img class="game_img" src="{% static './img/ff7_remake_portada.jpg' %}" alt="ff7_remake_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_1">
+                        <h2>Precio: $ 59.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_game">
+                    <div class="titulo_juego_2">
+                        <h2>TLOZ: Breath of the Wild</h2>
+                        <p class="plataform">Nintendo Switch</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_zelda.html">
+                            <img class="game_img" src="{% static './img//botw_portada.jpg' %}" alt="zelda_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_2">
+                        <h2>Precio: $ 49.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_game">
+                    <div class="titulo_juego_3">
+                        <h2 class="name_title">Demon Souls</h2>
+                        <p class="plataform">PS5</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_demon_souls.html">
+                            <img class="game_img" src="{% static './img/demon_souls_portada.jpg' %}" alt="demon_souls_img">
+                        </a>
+                    </div>
+                    <div class="preciojuego3">
+                        <h2>Precio: $ 69.990</h2>
+                    </div>
+                </aside>
+                <aside class="aside_game">
+                    <div class="titulo_juego_4">
+                        <h2 class="name_title">Pokemon Let's Go Pikachu!</h2>
+                        <p class="plataform">Nintendo Switch</p>
+                    </div>
+                    <div class="game_content">
+                        <a href="./juego_pokemon.html">
+                            <img class="game_img" src="{% static './img/pokemon_portada.jpg' %}" alt="pokemon_img">
+                        </a>
+                    </div>
+                    <div class="precio_juego_4">
+                        <h2>Precio: $ 39.990</h2>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+    
+{% endblock content %}
+   
+        
+
+

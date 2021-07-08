@@ -1,0 +1,256 @@
+body{
+    background-color: #3385d9;
+}
+
+.container{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.navegacion{
+    background-color: #ffffff;
+    color: #3385d9;
+}
+
+.descripcion_juego {
+    text-align: justify;
+}
+
+.info_registro {
+    text-align: justify;
+}
+
+.carousel-item{
+    width: auto;
+    height: auto;
+}
+
+.carrusel-img{
+    height: 30rem;
+}
+.cuerpo{
+    background-color: white;
+    text-align: justify;
+
+}
+
+.header_cuerpo{
+    background-color: white;
+    text-align: center;
+}
+
+.aside-wrap{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: transparent;
+}
+
+.aside_game {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.aside_login {
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.name-title{
+    font-size: 20px;
+
+}
+
+.game_content{
+    width: 450px;
+    transition: .5s ease; 
+}
+
+.game_content:hover{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+.login_content{
+    width: 450px;
+    transition: .5s ease; 
+}
+
+.btn_compra{
+    width: 450px;
+    transition: .5s ease; 
+}
+.btn_compra:hover{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+.contacto{
+    width: 250px;
+    transition: .5s ease; 
+}
+
+.contacto:hover{
+    transform: scale(1.1);
+    transition: .5s ease;
+}
+
+.plataform{
+    font-size: 20px;
+}
+
+.game_img{
+    width: 350px;
+    border-radius: 5px;
+}
+
+.portada_img {
+    width: 336px;
+    height: 392px;
+    padding: 0 40px 20px 0;
+}
+
+.portada_img_ps5 {
+    width: 520px;
+    height: 392px;
+}
+
+.portada_img_switch {
+    width: 520px;
+    height: 392px;
+}
+
+.btn_compra{
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-style: hidden;
+    background-color: #3385d9;
+    box-shadow: 0 0 5px 2px #0000003a;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn_compra:hover{
+    background-color: #3385d9;
+    transition: .5s ease;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer_content{
+    display: grid;
+    width: auto;
+    background-color: white;
+    color: rgb(47, 141, 230);
+    grid-template-columns: 20% auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer_text{
+    text-align: left;
+}
+
+.redes {
+    width: 15%;
+    text-align:center;
+    
+
+}
+
+.redes ul li {
+    background-color: rgb(255, 254, 254);
+    border-radius: 60%;
+    width: 32px;
+    height: 32px;
+}
+
+.redes img {
+    height: 16px;
+}
+
+.cuerpo_superior{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+} 
+
+.cuerpo_inferior{
+    background-color: white;
+}
+
+.row_registro{
+    width: 40%;
+    margin: 2%;
+}
+
+.form-group_registro{
+    padding: 0.3cm;
+}
+
+.titulo_registro{
+    text-align: center;
+}
+
+@media screen and (max-width: 425px){
+    .aside-wrap{
+        flex-direction: column;
+        text-align: center;
+    }
+    .game_img{
+        width: 200px;       
+    }
+    .carrusel-img{
+        height: 10rem;
+        width: auto;
+    }
+    .carrusel{
+        width: 250px;
+    }
+    .aside_game {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .game_content{
+        width: 250px;
+        transition: .5s ease; 
+    }
+    .footer_content{
+        width: auto;
+        display: block;
+        
+    }
+    .redes {
+        width: auto;
+        text-align:center;
+        display: flex;
+        
+    }
+    .menu_wrap{
+        display: flex;
+        list-style: none;
+    }
+}
