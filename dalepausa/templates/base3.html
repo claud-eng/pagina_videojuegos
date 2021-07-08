@@ -1,0 +1,46 @@
+<!-- base.html -->
+{% load static %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        {% block css %} {% endblock css %}
+    </head>
+    <body>
+    {% block navbar %}
+    <!-- Cabezera -->
+    <nav id="navbar">
+        
+        <div id="nav">
+            <ul>            
+                <li class="nav-item"><a href="{% url 'home' %}">inicio</a></li>
+                <li class="nav-item"><a href="#">quiénes somos</a></li>
+                <li class="nav-item"><a href="#">contáctanos</a></li>
+
+                {% if not user.is_authenticated %}        
+                <li class="nav-item"><a href="{% url 'registrar_usuario' %}">registrarse</a></li>
+                <li class="nav-item"><a href="{% url 'login' %}">iniciar sesión</a></li>
+                {% endif %}
+                
+                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <li class="nav-item"><a href="{% url 'listar_videojuegos' %}">Listar videojuegos</a></li>
+                {% endif %}               
+                <li class="nav-item"><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                <span class="ml-md-5" style="color: blue;"><strong>Usuario: {{ user.get_username }}</strong></span>
+                {% endif %}                
+            </ul>
+        </div>                                 
+    </nav>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+    <div>
+        {% block footer %} {% endblock %}
+    </div>
+    {% block javascript %} {% endblock javascript %}
+    </body>
+</html>

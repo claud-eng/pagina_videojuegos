@@ -40,7 +40,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.Registro',
     'apps.Usuario',
+    'rest_framework',
+    'rest_framework.authtoken',   #---> Para autenticar por token a los usuarios
 ]
+
+REST_FRAMEWORK = {
+   'DEFAULT_AUTHENTICATION_CLASSES': (
+       'rest_framework.authentication.TokenAuthentication',
+   ),
+   'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAdminUser',
+   ),
+}
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -121,11 +134,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL = '/images/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+#STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'images')
+STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
+
+
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
