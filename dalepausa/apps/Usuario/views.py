@@ -12,7 +12,7 @@ class UsuarioCreate(CreateView):
     model = User
     template_name = "Usuario/registrar_usuario.html"
     form_class = UsuarioForm
-    success_url = reverse_lazy('listar_usuarios')
+    success_url = reverse_lazy('login')
 
 
 class UsuarioList(ListView):

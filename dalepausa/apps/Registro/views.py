@@ -10,7 +10,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 from django.conf import settings
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 
 
 
@@ -31,20 +31,6 @@ from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 
 
-
-#-- clase para crear apis
-# class API_objects(generics.ListCreateAPIView):
-#     queryset = Consola.objects.all()
-#     serializer_class = ConsolaSerializer
-    
-# class API_objects_details(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Consola.objects.all()
-#     serializer_class = ConsolaSerializer
-
-
-
-# El decorador @api_view verifica que la solicitud HTTP apropiada 
-# se pase a la función de vista. En este momento, solo admitimos solicitudes GET
 #VIDEOJUEGOS
 @api_view(['GET', 'POST'])
 def videojuego_collection(request):
@@ -157,3 +143,4 @@ class ConsolaUpdate(UpdateView):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
+
